@@ -1,0 +1,6 @@
+function doPost(e) {
+  const sheet = SpreadsheetApp.openById("YOUR_FORM_RESPONSES_SHEET_ID").getSheetByName("Sheet1");
+  const data = JSON.parse(e.postData.contents);
+  sheet.appendRow([new Date(), data.name, data.nid, data.passport]);
+  return ContentService.createTextOutput("Success");
+}
