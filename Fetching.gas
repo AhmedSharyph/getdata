@@ -1,0 +1,6 @@
+function doGet(e) {
+  const sheet = SpreadsheetApp.openById("YOUR_SOURCE_DATA_SHEET_ID").getSheetByName("Sheet1");
+  const data = sheet.getRange(2, 1, sheet.getLastRow() - 1, 2).getValues();
+  const result = data.map(row => ({ id: row[0], name: row[1] }));
+  return ContentService.createTextOutput(JSON.stringify(result)).setMimeType(ContentService.MimeType.JSON);
+}
