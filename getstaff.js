@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const select = document.getElementById("staffSelect");
 
-  fetch("YOUR_GET_WEBAPP_URL")
+  fetch("https://script.google.com/macros/s/AKfycbwtRldzShmpXD9m0cVAH4Os6hNB3nUbZNYUh4nrmnmxSkGWsSuP1WTNtRFqPvjX__-M/exec")
     .then(res => res.json())
     .then(data => {
       data.forEach(item => {
